@@ -6,67 +6,230 @@
     <title>Pn. Misha | Pakar Runding Toyota Malaysia</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --toyota-red: #eb0a1e;
-            --dark-grey: #222;
-            --light-grey: #f8f9fa;
-            --white: #ffffff;
-            --whatsapp-green: #25d366;
-        }
+    :root {
+        --toyota-red: #eb0a1e;
+        --dark-grey: #222;
+        --light-grey: #f8f9fa;
+        --white: #ffffff;
+        --whatsapp-green: #25d366;
+    }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--white); color: var(--dark-grey); line-height: 1.6; }
+    * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; 
+        font-family: 'Inter', sans-serif; 
+    }
 
-        nav { padding: 20px; text-align: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: white; z-index: 1000; }
-        .logo { font-weight: 700; letter-spacing: 2px; color: var(--toyota-red); }
+    body { 
+        background-color: var(--white); 
+        color: var(--dark-grey); 
+        line-height: 1.6; 
+    }
 
-        header { padding: 60px 20px; text-align: center; background: linear-gradient(180deg, #fff 0%, #fcfcfc 100%); }
-        .profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid var(--toyota-red); margin-bottom: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        h1 { font-size: 1.8rem; margin-bottom: 5px; }
-        .badge { background: #e3f2fd; color: #0d47a1; padding: 5px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+    /* Navigation & Logo */
+    nav { 
+        padding: 15px 20px; 
+        text-align: center; 
+        border-bottom: 1px solid #eee; 
+        position: sticky; 
+        top: 0; 
+        background: white; 
+        z-index: 1000; 
+    }
 
-        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 20px; max-width: 600px; margin: 0 auto; }
-        .stat-card { background: var(--light-grey); padding: 15px; border-radius: 12px; text-align: center; }
-        .stat-card h3 { color: var(--toyota-red); font-size: 1.3rem; }
-        .stat-card p { font-size: 0.8rem; color: #666; }
+    .main-logo {
+        height: 45px; /* Saiz logo Toyota yang optimum */
+        width: auto;
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+    }
 
-        .btn-whatsapp { display: block; background-color: var(--whatsapp-green); color: white; text-decoration: none; padding: 16px; border-radius: 50px; font-weight: 700; margin: 25px auto; max-width: 350px; text-align: center; box-shadow: 0 8px 15px rgba(37, 211, 102, 0.2); }
+    /* Header & Profile */
+    header { 
+        padding: 50px 20px; 
+        text-align: center; 
+        background: linear-gradient(180deg, #fff 0%, #fcfcfc 100%); 
+    }
 
-        .section-title { text-align: center; margin: 40px 0 20px; font-weight: 700; font-size: 1.4rem; padding: 0 20px; }
+    .profile-img { 
+        width: 140px; 
+        height: 140px; 
+        border-radius: 50%; 
+        object-fit: cover; 
+        border: 4px solid var(--toyota-red); 
+        margin-bottom: 20px; 
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+    }
 
-        /* Testimonials */
-        .testimonials { padding: 20px; background: #fffafb; }
-        .testi-container { display: flex; overflow-x: auto; gap: 15px; padding-bottom: 10px; -webkit-overflow-scrolling: touch; }
-        .testi-card { min-width: 280px; background: white; padding: 20px; border-radius: 15px; border: 1px solid #f0f0f0; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
-        .testi-text { font-style: italic; font-size: 0.9rem; color: #444; }
-        .testi-name { font-weight: 700; display: block; margin-top: 10px; color: var(--toyota-red); font-size: 0.85rem; }
+    h1 { font-size: 1.8rem; margin-bottom: 5px; }
 
-        /* Documents Section */
-        .docs-section { padding: 40px 20px; background: var(--dark-grey); color: white; border-radius: 30px 30px 0 0; }
-        .doc-list { list-style: none; max-width: 450px; margin: 0 auto; }
-        .doc-item { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; margin-bottom: 10px; display: flex; align-items: center; border-left: 3px solid var(--toyota-red); }
-        .doc-icon { margin-right: 15px; font-size: 1.2rem; }
+    .badge { 
+        background: #e3f2fd; 
+        color: #0d47a1; 
+        padding: 5px 15px; 
+        border-radius: 20px; 
+        font-size: 0.75rem; 
+        font-weight: 600; 
+    }
 
-        /* Car Catalog */
-        .catalog { padding: 40px 20px; }
-        .car-card { border: 1px solid #eee; border-radius: 20px; padding: 20px; margin-bottom: 20px; position: relative; }
-        .car-price { color: var(--toyota-red); font-weight: 700; font-size: 0.85rem; }
-        .btn-book { display: inline-block; width: 100%; background: var(--dark-grey); color: white; text-align: center; padding: 12px; border-radius: 10px; text-decoration: none; margin-top: 15px; font-weight: 600; font-size: 0.9rem; }
+    /* Stats Section */
+    .stats-grid { 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px; 
+        padding: 20px; 
+        max-width: 600px; 
+        margin: 0 auto; 
+    }
 
-        footer { text-align: center; padding: 30px 20px; font-size: 0.75rem; color: #bbb; background: #fff; }
+    .stat-card { 
+        background: var(--light-grey); 
+        padding: 15px; 
+        border-radius: 12px; 
+        text-align: center; 
+    }
 
-        /* Scrollbar hide for testimonials */
-        .testi-container::-webkit-scrollbar { display: none; }
-        
-        @media (min-width: 768px) {
-            .stats-grid { grid-template-columns: repeat(4, 1fr); }
-            .testi-container { justify-content: center; overflow-x: hidden; }
-        }
-    </style>
+    .stat-card h3 { color: var(--toyota-red); font-size: 1.3rem; }
+    .stat-card p { font-size: 0.8rem; color: #666; }
+
+    /* Buttons */
+    .btn-whatsapp { 
+        display: block; 
+        background-color: var(--whatsapp-green); 
+        color: white; 
+        text-decoration: none; 
+        padding: 16px; 
+        border-radius: 50px; 
+        font-weight: 700; 
+        margin: 25px auto; 
+        max-width: 350px; 
+        text-align: center; 
+        box-shadow: 0 8px 15px rgba(37, 211, 102, 0.2); 
+        transition: 0.3s ease;
+    }
+
+    .btn-whatsapp:active { transform: scale(0.98); }
+
+    .section-title { 
+        text-align: center; 
+        margin: 40px 0 20px; 
+        font-weight: 700; 
+        font-size: 1.4rem; 
+        padding: 0 20px; 
+    }
+
+    /* Testimonials (Horizontal Scroll) */
+    .testimonials { padding: 40px 20px; background: #fffafb; }
+    
+    .testi-container { 
+        display: flex; 
+        overflow-x: auto; 
+        gap: 15px; 
+        padding: 10px 5px 20px 5px; 
+        -webkit-overflow-scrolling: touch; 
+    }
+
+    .testi-card { 
+        min-width: 280px; 
+        background: white; 
+        padding: 20px; 
+        border-radius: 15px; 
+        border: 1px solid #f0f0f0; 
+        border-left: 4px solid var(--toyota-red);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
+    }
+
+    .testi-text { font-style: italic; font-size: 0.9rem; color: #444; }
+    .testi-name { font-weight: 700; display: block; margin-top: 10px; color: var(--toyota-red); font-size: 0.85rem; }
+    
+    .testi-container::-webkit-scrollbar { display: none; } /* Sorok scrollbar */
+
+    /* Documents Section */
+    .docs-section { 
+        padding: 40px 20px; 
+        background: var(--dark-grey); 
+        color: white; 
+        border-radius: 30px 30px 0 0; 
+    }
+
+    .doc-wrapper { max-width: 500px; margin: 0 auto; }
+
+    .doc-box { 
+        background: rgba(255,255,255,0.05); 
+        padding: 20px; 
+        border-radius: 15px; 
+        margin-bottom: 20px; 
+        border-left: 3px solid var(--toyota-red);
+    }
+
+    .doc-box h3 { 
+        font-size: 1rem; 
+        color: var(--toyota-red); 
+        margin-bottom: 12px; 
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .doc-list { list-style: none; }
+    .doc-list li { font-size: 0.9rem; margin-bottom: 8px; color: #ddd; display: flex; align-items: center; }
+    .doc-list li::before { content: "✓"; color: var(--toyota-red); margin-right: 10px; font-weight: bold; }
+
+    /* Car Catalog */
+    .catalog { padding: 40px 20px; }
+    
+    .car-card { 
+        border: 1px solid #eee; 
+        border-radius: 20px; 
+        padding: 20px; 
+        margin-bottom: 20px; 
+        transition: 0.3s;
+    }
+
+    .car-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+    .car-price { color: var(--toyota-red); font-weight: 700; font-size: 0.85rem; display: block; margin-bottom: 5px; }
+
+    .btn-book { 
+        display: inline-block; 
+        width: 100%; 
+        background: var(--dark-grey); 
+        color: white; 
+        text-align: center; 
+        padding: 12px; 
+        border-radius: 10px; 
+        text-decoration: none; 
+        margin-top: 15px; 
+        font-weight: 600; 
+        font-size: 0.9rem; 
+    }
+
+    /* Footer */
+    footer { 
+        text-align: center; 
+        padding: 30px 20px; 
+        font-size: 0.75rem; 
+        color: #bbb; 
+        background: #fff; 
+        border-top: 1px solid #f5f5f5;
+    }
+
+    /* Desktop View Adjustments */
+    @media (min-width: 768px) {
+        .stats-grid { grid-template-columns: repeat(4, 1fr); }
+        .testi-container { justify-content: center; overflow-x: hidden; flex-wrap: wrap; }
+        .testi-card { min-width: 350px; }
+    }
+</style>
+
 </head>
 <body>
 
-    <nav><div class="logo">TOYOTA MALAYSIA</div></nav>
+    <nav>
+    <img src="https://static.vecteezy.com/system/resources/previews/020/927/378/non_2x/toyota-brand-logo-car-symbol-with-name-black-design-japan-automobile-illustration-free-vector.jpg" alt="Toyota Logo" class="main-logo">
+</nav>
+
 
     <header>
         <img src="https://via.placeholder.com/150" alt="Pn Misha" class="profile-img">
