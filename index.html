@@ -244,7 +244,65 @@
     text-align: center; /* Memastikan teks dan gambar berada di tengah */
 }
         
+/* Bahagian Langkah/Timeline */
+.steps-section {
+    padding: 50px 20px;
+    background-color: #fcfcfc;
+}
 
+.steps-container {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.step-card {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Garis penghubung antara langkah */
+.step-card:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 45px;
+    width: 2px;
+    height: calc(100% - 15px);
+    background: #eee;
+}
+
+.step-number {
+    min-width: 42px;
+    height: 42px;
+    background-color: var(--toyota-red);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-right: 20px;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(235, 10, 30, 0.2);
+}
+
+.step-content h4 {
+    font-size: 1rem;
+    color: var(--dark-grey);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.step-content p {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.5;
+}
+        
 
         
 </style>
@@ -320,6 +378,43 @@
 </section>
     
 
+    <section class="steps-section">
+    <h2 class="section-title">4 Langkah Mudah Miliki Toyota</h2>
+    <div class="steps-container">
+        <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-content">
+                <h4>Sesi Perundingan Maya</h4>
+                <p>Bincangkan model pilihan, bajet, dan keperluan harian anda secara santai melalui WhatsApp atau panggilan telefon.</p>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-content">
+                <h4>Penghantaran Dokumen Digital</h4>
+                <p>Hantar salinan dokumen melalui aplikasi mesej yang selamat. Saya akan uruskan segala proses permohonan dengan pihak bank.</p>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-content">
+                <h4>Kelulusan & Pengesahan</h4>
+                <p>Setelah pinjaman diluluskan, saya akan berikan penjelasan terperinci mengenai kadar faedah dan struktur bayaran bulanan anda.</p>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">04</div>
+            <div class="step-content">
+                <h4>Penyerahan Kunci</h4>
+                <p>Pilih untuk ambil kenderaan di showroom atau saya hantar terus ke lokasi pilihan anda dengan majlis penyerahan yang istimewa.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    
 
     
     <section class="catalog">
