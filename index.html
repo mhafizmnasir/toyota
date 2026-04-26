@@ -1,1 +1,248 @@
 
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misha Toyota 3S Nilai | Ejen Sah Toyota</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --toyota-red: #eb0a1e;
+            --dark-bg: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            margin-bottom: 70px; /* Ruang untuk bottom nav */
+        }
+
+        /* Header & Logo */
+        .header-top {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--toyota-red);
+        }
+
+        .toyota-logo {
+            height: 35px;
+        }
+
+        .tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1619682817481-e994891cd1f5?q=80&w=1470&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px 25px;
+        }
+
+        .hero-content h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .hero-content h1 {
+            font-weight: 800;
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .price-text {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Buttons */
+        .contact-btn-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn-call {
+            background: white;
+            color: black;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+
+        .btn-whatsapp {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            color: white;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        /* Model Grid */
+        .section-title {
+            padding: 25px 20px 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .model-card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .model-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .nav-item {
+            text-align: center;
+            color: #888;
+            text-decoration: none;
+            font-size: 0.7rem;
+        }
+
+        .nav-item i {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 2px;
+        }
+
+        .nav-item.active {
+            color: var(--toyota-red);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-top">
+        <img src="https://www.toyota.com.my/etc.clientlibs/toyota/clientlibs/clientlib-site/resources/images/toyota-logo.png" alt="Toyota Logo" class="toyota-logo">
+        <div class="tagline">Move your world</div>
+        <i class="fas fa-bars fa-lg"></i>
+    </div>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h2 id="business-name">Misha Toyota 3S Nilai</h2>
+            <h1>YOUR ERA,<br>YOUR DRIP,<br>YOUR VIBE</h1>
+            <p class="price-text">From RM88,000.00</p>
+            
+            <div class="contact-btn-container">
+                <a href="tel:+60189801186" class="btn-call">
+                    <i class="fas fa-user-tie me-2"></i> HUBUNGI MISHA @ 018-9801186
+                </a>
+                <a href="https://wa.me/60189801186" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp me-2"></i> WHATSAPP
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="section-title">Model-Model Toyota Lain</h3>
+    <div class="container mb-5">
+        <div class="row row-cols-2 g-2">
+            <div class="col">
+                <div class="model-card">
+                    <img src="https://www.toyota.com.my/content/dam/toyota/my/models/vios/vios-ngap/explore/vios-explore-exterior.png" alt="Vios">
+                    <h6>VIOS</h6>
+                    <p class="small text-muted">From RM89,600</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="model-card">
+                    <img src="https://www.toyota.com.my/content/dam/toyota/my/models/hilux/hilux-double-cab/explore/hilux-dc-exterior.png" alt="Hilux">
+                    <h6>HILUX</h6>
+                    <p class="small text-muted">From RM103,880</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="model-card">
+                    <img src="https://www.toyota.com.my/content/dam/toyota/my/models/corolla-cross/corolla-cross-hybrid/explore/corolla-cross-exterior.png" alt="Corolla Cross">
+                    <h6>COROLLA CROSS</h6>
+                    <p class="small text-muted">From RM130,400</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="model-card">
+                    <img src="https://www.toyota.com.my/content/dam/toyota/my/models/yaris/yaris-mc/explore/yaris-explore-exterior.png" alt="Yaris">
+                    <h6>YARIS</h6>
+                    <p class="small text-muted">From RM88,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <i class="fas fa-home"></i>
+            Utama
+        </a>
+        <a href="#models" class="nav-item">
+            <i class="fas fa-car"></i>
+            Model
+        </a>
+        <a href="tel:+60189801186" class="nav-item">
+            <i class="fas fa-phone-alt"></i>
+            Hubungi
+        </a>
+        <a href="https://wa.me/60189801186" class="nav-item">
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/bundle.min.js"></script>
+</body>
+</html>
