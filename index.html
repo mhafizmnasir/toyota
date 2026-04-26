@@ -303,7 +303,59 @@
     line-height: 1.5;
 }
         
+/* Bahagian Pakej & Aksesori */
+.accessories-section {
+    padding: 50px 20px;
+    background-color: white;
+}
 
+.acc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Susunan 2 kotak sebaris di telefon */
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.acc-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    transition: 0.3s;
+}
+
+.acc-card:hover {
+    border-color: var(--toyota-red);
+}
+
+.acc-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.acc-card h4 {
+    font-size: 0.9rem;
+    color: var(--dark-grey);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.acc-card p {
+    font-size: 0.75rem;
+    color: #777;
+    line-height: 1.4;
+}
+
+/* Penyesuaian untuk skrin lebih besar */
+@media (min-width: 768px) {
+    .acc-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+        
         
 </style>
 
@@ -416,6 +468,41 @@
     </section>
     
 
+
+
+    <section class="accessories-section">
+    <h2 class="section-title">Nilai Tambah Untuk Anda</h2>
+    <div class="acc-grid">
+        <div class="acc-card">
+            <div class="acc-icon">🛡️</div>
+            <h4>Waranti 5 Tahun</h4>
+            <p>Perlindungan penuh tanpa had perbatuan untuk ketenangan minda anda dalam jangka masa panjang.</p>
+        </div>
+        
+        <div class="acc-card">
+            <div class="acc-icon">📞</div>
+            <h4>24/7 Roadside Assist</h4>
+            <p>Bantuan kecemasan jalan raya tersedia bila-bila masa anda memerlukannya di mana jua anda berada.</p>
+        </div>
+
+        <div class="acc-card">
+            <div class="acc-icon">✨</div>
+            <h4>Aksesori GR Parts</h4>
+            <p>Pilihan aksesori eksklusif Gazoo Racing untuk penampilan yang lebih sporty dan dinamik.</p>
+        </div>
+
+        <div class="acc-card">
+            <div class="acc-icon">📱</div>
+            <h4>Sistem Telematik</h4>
+            <p>Pantau lokasi dan status kenderaan anda melalui aplikasi telefon pintar dengan teknologi Toyota 24SEVEN.</p>
+        </div>
+    </div>
+    </section>
+    
+
+
+
+    
     
     <section class="catalog">
     <h2 class="section-title">Pilih Model Idaman Anda</h2>
