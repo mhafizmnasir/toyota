@@ -221,6 +221,32 @@
         .testi-container { justify-content: center; overflow-x: hidden; flex-wrap: wrap; }
         .testi-card { min-width: 350px; }
     }
+
+
+/* Tambah kod ini di dalam bahagian <style> */
+.car-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    object-fit: contain; /* Memastikan gambar tidak kembang atau terpenyet */
+}
+
+/* Mengemaskini kotak kad kereta untuk sokongan gambar */
+.car-card { 
+    border: 1px solid #eee; 
+    border-radius: 20px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    transition: 0.3s;
+    background: #fff;
+    text-align: center; /* Memastikan teks dan gambar berada di tengah */
+}
+        
+
+
+        
 </style>
 
 </head>
@@ -269,22 +295,25 @@
     </section>
 
     <section class="catalog">
-        <h2 class="section-title">Pilih Model Idaman Anda</h2>
-        
-        <div class="car-card">
-            <span class="car-price">HARGA DARI RM88,000</span>
-            <h3>Toyota Yaris (New Face)</h3>
-            <p style="font-size: 0.85rem; color: #666;">Hatchback paling ikonik untuk gaya hidup bandar.</p>
-            <a href="https://wa.me/60189801186?text=Hai%20Pn%20Misha,%20saya%20berminat%20dengan%20Yaris" class="btn-book">Semak Kelayakan Pinjaman</a>
-        </div>
+    <h2 class="section-title">Pilih Model Idaman Anda</h2>
+    
+    <div class="car-card">
+        <img src="https://cms-pub.toyota.com.my/storage/vios-yaris-2023/yaris/exterior/color/silver-metallic-v2.png" alt="Toyota Yaris" class="car-img">
+        <span class="car-price">HARGA DARI RM88,000</span>
+        <h3>Toyota Yaris</h3>
+        <p style="font-size: 0.85rem; color: #666;">Hatchback paling gaya dengan ciri keselamatan dipertingkatkan.</p>
+        <a href="https://wa.me/60189801186?text=Hai%20Pn%20Misha,%20saya%20berminat%20dengan%20Yaris" class="btn-book">Semak Kelayakan Pinjaman</a>
+    </div>
 
-        <div class="car-card">
-            <span class="car-price">HARGA DARI RM90,600</span>
-            <h3>Toyota Vios</h3>
-            <p style="font-size: 0.85rem; color: #666;">Keselesaan premium dengan ciri keselamatan tercanggih.</p>
-            <a href="https://wa.me/60189801186?text=Hai%20Pn%20Misha,%20saya%20berminat%20dengan%20Vios" class="btn-book">Semak Kelayakan Pinjaman</a>
-        </div>
-    </section>
+    <div class="car-card">
+        <img src="https://cms-pub.toyota.com.my/storage/vios-yaris-2023/vios/exterior/color/platinum-white-pearl.png" alt="Toyota Vios" class="car-img">
+        <span class="car-price">HARGA DARI RM90,600</span>
+        <h3>Toyota Vios</h3>
+        <p style="font-size: 0.85rem; color: #666;">Sedan segmen-B paling premium dengan teknologi tercanggih.</p>
+        <a href="https://wa.me/60189801186?text=Hai%20Pn%20Misha,%20saya%20berminat%20dengan%20Vios" class="btn-book">Semak Kelayakan Pinjaman</a>
+    </div>
+</section>
+
 
     <footer>
         <p>&copy; 2026 Puan Misha - Authorized Toyota Sales Advisor</p>
